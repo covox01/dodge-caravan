@@ -4,18 +4,218 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+button {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   background: none;
+}
+
+.f1-bottom-shadow,
+.f1-text-1,
+.f1-text-2,
+.f2-shadow,
+.f2-text,
+.f3-shadow,
+.f3-text,
+.f4-text-1,
+.f4-text-2,
+.f4-button,
+.f1-top-shadow {
+   background-repeat: no-repeat;
+}
 
 .main-container {
-   margin: 0 auto;
-   height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+	margin: 0 auto;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .ad-container {
-   width: 300px;
-   height: 250px;
-   border: 1px solid red;
+	width: 300px;
+	height: 250px;
+   display: flex;
+   position: relative;
    overflow: hidden;
 }
+
+/* Frame 1 Elements */
+   .intro-image {
+      position: absolute;
+   }
+
+   .f1-top-shadow {
+      background-image: url("../assets/exported-png/f1/f1-top-shadow.png");
+      width: 300px;
+      height: 250px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+   }
+
+   .f1-bottom-shadow {
+      background-image: url("../assets/exported-png/f1/f1-bottom-shadow.png");
+      width: 300px;
+      height: 250px;
+      position: absolute;
+   }
+
+   .f1-text {
+      margin: 0 auto;
+      width: 172px;
+      position: absolute;
+      top: 15px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+   }
+
+   .f1-text-1 {
+      background-image: url("../assets/exported-png/f1/f1-text-1.png");
+      width: 172px;
+      height: 16px;
+      margin: 0 auto;
+      position: absolute;
+      top: 0px;
+
+   }
+
+   .f1-text-2 {
+      background-image: url("../assets/exported-png/f1/f1-text-2.png");
+      width: 172px;
+      height: 16px;
+      margin: 0 auto;
+      position: absolute;
+      top: 20px
+   }
+
+   .logo {
+      position: absolute;
+      bottom: 10px;
+      left: 15px;
+      z-index: 100;
+   }
+
+/* Frame 2, 3, 4 Main Image */
+   .main-image {
+      position: absolute;
+      transform: translateY(-250px) translateX(-95px) scale(.85);
+      z-index: -30;
+   }
+
+/* Frame 2 Elements */
+   .f2-shadow, .f2-text {
+      z-index: -10
+   }
+
+   .f2-shadow {
+      background-image: url("../assets/exported-png/f2/f2-shadow.png");
+      width: 300px;
+      height: 250px;
+      position: absolute;
+   }
+
+   .f2-perspective {
+      margin: 0 auto;
+      position: absolute;
+      perspective: 500px;
+      top: 20px;
+      left: 0;
+      right: 0;
+   }
+
+   .f2-text {
+      background-image: url("../assets/exported-png/f2/f2-text.png");
+      transform: rotateX(90deg);
+      margin: 0 auto;
+      width: 192px;
+      height: 16px;
+      position: relative;
+   }
+
+   /* Frame 3 Elements */
+   .f3-shadow {
+      background-image: url("../assets/exported-png/f3/f3-shadow.png");
+      width: 300px;
+      height: 250px;
+      position: relative;
+      right: -300px;
+   }
+
+   .f3-perspective {
+      margin: 0 auto;
+      position: absolute;
+      perspective: 500px;
+      top: 20px;
+      left: 0;
+      right: 0;
+   }
+
+   .f3-text {
+      background-image: url("../assets/exported-png/f3/f3-text.png");
+      transform: rotateX(90deg);
+      width: 234px;
+      height: 16px;
+      margin: 0 auto;
+   }
+
+/* Frame 4 Elements */
+   .f4-text {
+      position: absolute;
+      margin: 0 auto;
+      top: 20px;
+      left: 0;
+      right: 0;
+      transform: scale(0);
+      opacity: 0;
+   }
+
+   .f4-text-1 {
+      background-image: url("../assets/exported-png/f4/f4-text-1.png");
+      width: 267px;
+      height: 19.5px;
+      margin: 0 auto 2px;
+   }
+
+   .f4-text-2 {
+      background-image: url("../assets/exported-png/f4/f4-text-2.png");
+      width: 267px;
+      height: 12.5px;
+      margin: 0 auto;
+   }
+
+   .f4-button-container {
+      width: 107.5px;
+      height: 26px;
+      position: absolute;
+      right: 15px;
+      bottom: -30px;
+      /* overflow: hidden; */
+   }
+
+   .f4-button {
+      background-image: url("../assets/exported-png/f4/f4-button.png");;
+      width: 107.5px;
+      height: 26px;
+      position: relative;
+      overflow: hidden;
+   }
+
+   .shine {
+      clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+      background: linear-gradient(-58deg, rgba(255,255,255, 1) 10%, rgba(174, 91, 91, .2) 100%, #eee 75%, rgba(255,255,255, .2) 15%);
+      opacity: .5;
+      height: 50px;
+      width: 70px;
+      position: absolute;
+      top: -10px;
+      left: -80px;
+      z-index: 150;
+   }
+
+
+
