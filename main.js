@@ -24,7 +24,7 @@
    const startSequenceOne = () => {
       let sequenceOne = new TimelineLite();
       sequenceOne
-      .from(frameOneTextGroup, 1.6, {
+      .from(frameOneTextGroup, 1.8, {
          top: -50, 
          ease: Back.easeInOut
       })
